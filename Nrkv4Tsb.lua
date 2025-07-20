@@ -54,7 +54,7 @@ local Section = Main:CreateSection("LocalPlayer")
 
 local Slider = Main:CreateSlider({
    Name = "Fov Changer",
-   Range = {10, 100},
+   Range = {10, 200},
    Increment = 10,
    Suffix = "Fov",
    CurrentValue = 10,
@@ -65,8 +65,8 @@ local Slider = Main:CreateSlider({
 })
 
 local Slider = Main:CreateSlider({
-   Name = "Slider Example",
-   Range = {10, 100},
+   Name = "Jump Changer",
+   Range = {10, 200},
    Increment = 10,
    Suffix = "Jump",
    CurrentValue = 10,
@@ -82,13 +82,34 @@ local Slider = Main:CreateSlider({
    end,
 })
 
-local Section2 = Main:CreateSection("Test")
+local Section2 = Main:CreateSection("Anti")
 
+local Button = Main:CreateButton({
+   Name = "Anti Kick",
+   Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/welomenchaina/Loader/refs/heads/main/AntiKickLoader",true))()
+   end,
+})
 
+local Button = Main:CreateButton({
+   Name = "Anti Kick - Code: Bac (Beta)",
+   Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Faheem-lua/NRKv4/main/NRKv4RayfieldFovJump.lua"))()
+   end,
+})
 
+local Button = Main:CreateButton({
+   Name = "Anti Fling",
+   Callback = function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/Linux6699/DaHubRevival/main/AntiFling.lua'))()
+   end,
+})
 
-
-
-
+local Button = Main:CreateButton({
+   Name = "Anti Chat Logger",
+   Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua", true))() 
+   end,
+})
 
 
