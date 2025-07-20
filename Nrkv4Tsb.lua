@@ -46,9 +46,9 @@ local Paragraph = Info:CreateParagraph({Title = "❗️Information", Content = "
 
 local Paragraph = Info:CreateParagraph({Title = "🤍 Credits:", Content = "Faheem: Owner-Script YQANTQ: Script function callback Subcribe to him for more script on yt⚙️"})
 
-local Label = Info:CreateLabel("Faheem", 9676276958, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+local Label = Info:CreateLabel("Faheem", aperture, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
 
-local Label = Info:CreateLabel("Mspaint - Upio", 6675147490, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+local Label = Info:CreateLabel("Mspaint - Upio", bolt, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
 
 local Section = Main:CreateSection("LocalPlayer")
 
@@ -82,7 +82,7 @@ local Slider = Main:CreateSlider({
    end,
 })
 
-local Section2 = Main:CreateSection("Anti")
+local Section2 = Main:CreateSection("Anti - Player")
 
 local Button = Main:CreateButton({
    Name = "Anti Kick",
@@ -94,7 +94,7 @@ local Button = Main:CreateButton({
 local Button = Main:CreateButton({
    Name = "Anti Kick - Code: Bac (Beta)",
    Callback = function()
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/Faheem-lua/NRKv4/main/NRKv4RayfieldFovJump.lua"))()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Mjajas/ANTII/refs/heads/main/antikick.lua"))()
    end,
 })
 
@@ -112,4 +112,211 @@ local Button = Main:CreateButton({
    end,
 })
 
+local Button = Tab:CreateButton({
+   Name = "Anti Afk v1",
+   Callback = function()
+     for i,v in next, getconnections(game:GetService("Players").LocalPlayer.Idled) do
+                    v:Disable()
+end
+   end,
+})
+
+local Section3 = Main:CreateSection("Esp & More")
+
+local Button = Tab:CreateButton({
+   Name = "Esp Players",
+   Callback = function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Esp Player+",
+   Callback = function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/zzerexx/scripts/main/UniversalEsp.lua '))() 
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Esp Player++",
+   Callback = function()
+     --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+getgenv().EspSettings = {
+	TeamCheck = false,
+	ToggleKey = "RightAlt",
+	RefreshRate = 10, -- how fast the esp updates (milliseconds)
+	MaximumDistance = 500, -- only renders players within this distance
+	FaceCamera = false, -- Makes esp appear 2D
+	AlignPoints = false, -- Improves 2D effect; only works while FaceCamera is enabled
+	-- AlignPoints: This may cause esp to have abnormal behavior when looking from certain angles
+	MouseVisibility = {
+		Enabled = true, -- makes any drawing objects transparent when they are near your mouse
+		Radius = 60,
+		Transparency = 0.3,
+		Method = "Hover", -- "Radius" or "Hover" | Hover is newest method and is a lot more accurate than Radius
+		HoverRadius = 50,
+		Selected = { -- set any of these to false to ignore them
+			Boxes = true,
+			Tracers = true,
+			Names = true,
+			Skeletons = true,
+			HealthBars = true,
+			HeadDots = true,
+			LookTracers = true
+		}
+	},
+	Highlights = {
+		Enabled = false,
+		Players = {}, -- put player usernames into this table to 'highlight' them
+		Transparency = 1,
+		Color = Color3.fromRGB(255, 150, 0),
+		AlwaysOnTop = true
+	},
+	NPC = {
+		Color = Color3.fromRGB(150,150,150),
+		Transparency = 1,
+		RainbowColor = false,
+		Overrides = {
+			Boxes = true,
+			Tracers = true,
+			Names = true,
+			Skeletons = true,
+			HealthBars = true,
+			HeadDots = true,
+			LookTracers = true
+		}
+	},
+	Boxes = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(255,255,255),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		OutlineThickness = 1,
+		Thickness = 1
+	},
+	Tracers = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(255,255,255),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		OutlineThickness = 1,
+		Origin = "Top", -- "Top" or "Center" or "Bottom" or "Mouse"
+		Thickness = 1
+	},
+	Names = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(255,255,255),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		Font = Drawing.Fonts.UI, -- UI or System or Plex or Monospace
+		Size = 18,
+		ShowDistance = false,
+		ShowHealth = true,
+		UseDisplayName = false,
+		DistanceDataType = "m", -- what it says after the distance (ex. 100m)
+		HealthDataType = "Percentage" -- "Percentage" or "Value"
+	},
+	Skeletons = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(255,255,255),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		OutlineThickness = 1,
+		Thickness = 1
+	},
+	HealthBars = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(0,255,0),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		OutlineThickness = 1,
+		Origin = "None", -- "None" or "Left" or "Right"
+		OutlineBarOnly = true
+	},
+	HeadDots = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(255,255,255),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		OutlineThickness = 1,
+		Thickness = 1,
+		Filled = false,
+		Scale = 1
+	},
+	LookTracers = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(255,255,255),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		OutlineThickness = 1,
+		Thickness = 1,
+		Length = 5
+	}
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dragon5819/Main/main/esp", "UniversalEsp"))()
+   end,
+})
+
+local Section = Mics:CreateSection("Servers")
+
+local Button = Tab:CreateButton({
+   Name = "Rejoin Servers",
+   Callback = function()
+     local ts = game:GetService("TeleportService")
+         
+     local p = game:GetService("Players").LocalPlayer
+
+     ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Hop Servers",
+   Callback = function()
+local Lowest = "ping" -- set to "playing" to find the lowest player server
+
+local HTTPService = game:GetService("HttpService")
+
+local success, servers = pcall(function()
+   return HTTPService:JSONDecode(game:HttpGet(
+       "https://games.roblox.com/v1/games/" .. tostring(game.PlaceId) .. "/servers/Public?limit=100"
+   )).data
+end)
+
+if not success then return end
+
+local server = servers[1]
+
+for i,svr in pairs(servers) do
+   if svr[Lowest] < server[Lowest] then
+       server = svr
+   end
+end
+
+game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, server.id)
+   end,
+})
 
