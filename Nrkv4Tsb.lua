@@ -50,5 +50,45 @@ local Label = Info:CreateLabel("Faheem", 9676276958, Color3.fromRGB(255, 255, 25
 
 local Label = Info:CreateLabel("Mspaint - Upio", 6675147490, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
 
+local Section = Main:CreateSection("LocalPlayer")
+
+local Slider = Main:CreateSlider({
+   Name = "Fov Changer",
+   Range = {10, 100},
+   Increment = 10,
+   Suffix = "Fov",
+   CurrentValue = 10,
+   Flag = "FovVhanger1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+     workspace.CurrentCamera.FieldOfView = Value
+   end,
+})
+
+local Slider = Main:CreateSlider({
+   Name = "Slider Example",
+   Range = {10, 100},
+   Increment = 10,
+   Suffix = "Jump",
+   CurrentValue = 10,
+   Flag = "JumpPower", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+     local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            humanoid.UseJumpPower = true
+            humanoid.JumpPower = Value
+        end
+   end,
+})
+
+local Section2 = Main:CreateSection("Test")
+
+
+
+
+
+
+
 
 
