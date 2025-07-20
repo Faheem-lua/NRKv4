@@ -112,7 +112,7 @@ local Button = Main:CreateButton({
    end,
 })
 
-local Button = Tab:CreateButton({
+local Button = Main:CreateButton({
    Name = "Anti Afk v1",
    Callback = function()
      for i,v in next, getconnections(game:GetService("Players").LocalPlayer.Idled) do
@@ -123,21 +123,21 @@ end
 
 local Section3 = Main:CreateSection("Esp & More")
 
-local Button = Tab:CreateButton({
+local Button = Main:CreateButton({
    Name = "Esp Players",
    Callback = function()
      loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/'))()
    end,
 })
 
-local Button = Tab:CreateButton({
+local Button = Main:CreateButton({
    Name = "Esp Player+",
    Callback = function()
      loadstring(game:HttpGet('https://raw.githubusercontent.com/zzerexx/scripts/main/UniversalEsp.lua '))() 
    end,
 })
 
-local Button = Tab:CreateButton({
+local Button = Main:CreateButton({
    Name = "Esp Player++",
    Callback = function()
      --[[
