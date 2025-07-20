@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "NRK v4 | The strongest Battlegrounds",
-   Icon = 1049060234, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Icon = code, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "😃 The Script its loading...",
    LoadingSubtitle = "🤍 Made By Faheem & k4sii Checking Valiadating..",
    ShowText = "Rayfield", -- for mobile users to unhide rayfield, change if you'd like
@@ -37,18 +37,18 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("Info", "info")
-local Tab = Window:CreateTab("Main", "code")
-local Tab = Window:CreateTab("Misc", "folder-code")
-local Tab = Window:CreateTab("Enchanced+", "moon-star")
+local Info = Window:CreateTab("Info", "info")
+local Main = Window:CreateTab("Main", "code")
+local Misc = Window:CreateTab("Misc", "biohazard")
+local Op = Window:CreateTab("Op", "sparkles")
 
 local Paragraph = Info:CreateParagraph({Title = "❗️Information", Content = "This Hub its still in (BETA!)"})
 
 local Paragraph = Info:CreateParagraph({Title = "🤍 Credits:", Content = "Faheem: Owner-Script YQANTQ: Script function callback Subcribe to him for more script on yt⚙️"})
 
-local Label = Tab:CreateLabel("Faheem", 9676276958, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+local Label = Info:CreateLabel("Faheem", 9676276958, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
 
-local Label = Tab:CreateLabel("Mspaint - Upio", 6675147490, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+local Label = Info:CreateLabel("Mspaint - Upio", 6675147490, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
 
 
 
